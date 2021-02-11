@@ -27,6 +27,7 @@ class MyScene extends Phaser.Scene {
         this.load.image('bg', 'assets/speed.gif');
         this.load.image('crate', 'assets/target.png');
         this.load.image('gameoverimg', 'assets/gameover.png');
+        this.load.audio('shot', ['assets/shot.mp3']);
     }
 
     create() {
@@ -41,6 +42,10 @@ class MyScene extends Phaser.Scene {
 
           var box = this.add.image(x, y, 'crate');
 
+          var shot = this.sound.add('shot');
+          this.input.on('pointerdown', function () {
+              shot.play();
+        });
           //  Make them all input enabled
           box.setInteractive();
 
@@ -60,7 +65,7 @@ class MyScene extends Phaser.Scene {
 
       //  Display the game stats
         info = this.add.text(10, 10, '', { font: '48px Courier', fill: '#00ff00' });
-        timer = this.time.addEvent({ delay: 10000, callback: this.gameOver, callbackScope: this });
+        timer = this.time.addEvent({ delay: 20000, callback: this.gameOver, callbackScope: this });
 
         this.gameOverText = this.add.text(400,250, 'Game Over', { font: '48px Courier', fill: '#FF0000' });
         this.gameOverText.setOrigin(0.5)
@@ -79,13 +84,13 @@ class MyScene extends Phaser.Scene {
     }
 
     update() {
-      info.setText('Targets Hit: ' + alive + '\nTime Left: ' + (Math.floor(10000 - timer.getElapsed()))/1000);
+      info.setText('Targets Hit: ' + alive + '\nTime Left: ' + (Math.floor(20000 - timer.getElapsed()))/1000);
 
     }
   clickHandler (box)
     {
         alive++;
-
+        //box.play();
         box.off('clicked', this.clickHandler);
         box.input.enabled = false;
         box.setVisible(false);
@@ -112,7 +117,7 @@ class MyScene extends Phaser.Scene {
         this.gameOverText.visible = false
         this.playAgain.visible = false
 })
-        this.score = this.add.text(400, 350, 'AVG Targets/Sec: '+ alive/10.0,{ font: '48px Courier', fill: '#0000FF' });
+        this.score = this.add.text(400, 350, 'AVG Targets/Sec: '+ alive/20.0,{ font: '48px Courier', fill: '#0000FF' });
         this.score.setOrigin(0.5)
     }
 }
