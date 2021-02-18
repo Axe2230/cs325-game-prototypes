@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Squirtle Jump!</title>
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Squirtle Jump</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+What is original about your game? It is a Pokemon character jumping around the screen trying to collect coins before the time runs out.
+</li>
+
+<li><strong>Technical Merit:</strong>
+What is interesting about your game technology? It incorporates music, keyboard input, and game physics to create an easy-to-play game.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+What did you learn from this prototype?
+What was the easiest or hardest part of making it? I learned this prototype from the Phaser Example Guide. The hardest part was getting the character to move around fluidly. I kept getting crashes in the starting, because my platform was not starting under the character, and it took a while to figure that out.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+Did you make your prototype assets from scratch? Did you borrow them? Cite your sources here.
+<ul>
+<li>Coin: <a href="https://www.searchpng.com/2019/07/05/pixelated-coin-png-image-free-download/">Coin</a></li>
+<li>Squirtle Sprite: <a href="https://www.pinterest.com/pin/450922981438482391/">Sprite</a></li>
+<li>Music: <a href="https://downloads.khinsider.com/game-soundtracks/album/10th-anniversary-konami-theme/01%2520believe%2520%2528dancing%2520blade%2529.mp3">Background Music</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+Which other game most closely resembles your game? If you are borrowing code from a Phaser Example, you must say so here. If you borrow code from elsewhere, you must say so here.
+I got most of my code from the following Phaser example: http://phaser.io/tutorials/making-your-first-phaser-3-game. My game is a simple example of a platform based game.
+</li>
+
+<li><strong>High Concept:</strong>
+A one-sentence summary of your game. Jump around as everyone's favorite pokemon trying to collect coins on the platform before the timer runs out.
+</li>
+
+<li><strong>Theme:</strong>
+State which of the Storymatic themes you used. The theme I used this week was "Your game takes exactly 20 seconds to play". The timer runs for exactly 20 seconds, and if you haven't collected all the coins by then, the game ends.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+State which input, randomness, genre, and play style you used in this prototype. The input was keyboard, the randomness was deterministic, the genre was platformer, and the play style is collector.
+</li>
+
+<li><strong>Prototype Goal:</strong>
+What game mechanic is this prototype evaluating? This prototype is evaluating game physics and unit collision, along with keyboard input to move sprite around the map.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+What experience do you want players to have when playing your game? I want players to have a fun experience controlling their favorite pokemon while trying to collect all the coins on the map.
+</li>
+
+<li><strong>Gameplay:</strong>
+A paragraph describing the actions the player can perform, the system dynamics, and the core mechanic. Include a concise explanation of the prototype’s inputs and their expected effects (how to play). You can also describe game play that is not in the prototype. You may include mock-up images for parts of the game not in the prototype.
+The player can use the arrow keys to move the character around the map to collect coins. The core mechanic is to collect as many coins as you can before the time runs out, and if you collect all of them before it runs out, you win the game. The character slowly floats around as he jumps, so you can use that to your advantage.
+</li>
+
+<li><strong>Strategies:</strong>
+What player strategies do you expect will be effective at playing this game? The strategy is to collect everything behind you before going on to higher platforms, because you will have to circle back if you miss some coins, which will lead to a wastage of time.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+A paragraph about the world your game is set in and who the characters are. What makes the game world and its occupants unique and interesting? Do the tokens represent something? If the game has a backstory, mention it here. If the game is abstract, then say so.
+How will the dramatic tension interact with the gameplay tension?
+
+You are a pokemon character trying to collect all the coins to win the game. The coins represent a way to win the game, and the timer represents how long you have to win. It adds dramatic tension, because the player will see the timer going down as they play the game, and it will add pressure.
+</li>
+
+<li><strong>Target Audience:</strong>
+A single sentence that describes the demographic you're trying to reach. Target audience is anyone who likes platform based games or likes Pokemon
+</li>
+
+<li><strong>Play Time:</strong>
+How long does your game take to play? Game takes less than 20 seconds to play.
+</li>
+
+</ul>
+</div>
+
+<!-- main.js must come at the end since it expects the HTML to have been created. -->
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
