@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>!</title>
+<title>Arcade Hockey!</title>
 <style>
 body
 {
@@ -19,78 +19,75 @@ body
 <body>
 <div id="game"></div>
 <div id="readme">
-<h2>DODGEBALL!</h2>
+<h2>Arcade Hockey!</h2>
 
 <ul>
 <li><strong>Originality:</strong>
-What is original about your game? It is an online dodgeball game situated in a gym surrounded by your classmates. Your goal is to dodge as many balls as they throw at you in order to get the highest score in the class.
+What is original about your game? It is an online 2P Arcade Air Hockey game. Usually this game is playable in person.
 </li>
 
 <li><strong>Technical Merit:</strong>
-What is interesting about your game technology? It incorporates music, keyboard input, and game physics to create an easy-to-play game which expresses player skill at analyzing and figuring out best way to move in order to dodge all the incoming projectiles.
+What is interesting about your game technology? It incorporates physics, mouse movement, keyboard events, score tracking, and collision boundaries to create a fun to play game that isn't hard to learn. I created most of my assests by hand.
 </li>
 
 <li><strong>Prototype Postmortem:</strong>
 What did you learn from this prototype?
-What was the easiest or hardest part of making it? I learned how to handle collision detection, and also how to rotate and reset balls back to a starting point. The hardest part was getting the balls to circle back around, because I had some silly bug in my code which took forever to find.
+What was the easiest or hardest part of making it? I learned how to handle collisions on specific boundaries, create mouse movement events, and control physics. The easiest part of the game was adding the background and paddles. The hardest part was getting the boundaries to work correctly within the goalposts that I drew. For some reason, the one in the bottom still doesn't work, even though the same applied logic works for the other side goalpost.
 </li>
 
 <li><strong>Prototype Assets:</strong>
 Did you make your prototype assets from scratch? Did you borrow them? Cite your sources here.
 <ul>
-<li>Background Image: <a href="http://clipart-library.com/clipart/927496.htm/">Gym</a></li>
-<li>Squirtle Sprite: <a href="https://www.pinterest.com/pin/450922981438482391/">Sprite</a></li>
-<li>Music: <a href="https://downloads.khinsider.com/game-soundtracks/album/10th-anniversary-konami-theme/01%2520believe%2520%2528dancing%2520blade%2529.mp3">Background Music</a></li>
-<li>Platform was retrieved from Phaser assets</li>
+<li>I drew the background by hand.</li>
+<li>Paddle was retrieved from Phaser assets</li>
 </ul>
 </li>
 
 <li><strong>Prototype Closest Other Game:</strong>
 Which other game most closely resembles your game? If you are borrowing code from a Phaser Example, you must say so here. If you borrow code from elsewhere, you must say so here.
-I didn't really use any phaser examples to create this game. My game resembles dodgeball.
+I used the pinball Phaser example to see how paddles work, and I changed that a lot to create what I have now.
 </li>
 
 <li><strong>High Concept:</strong>
-A one-sentence summary of your game. Try to dodge as many incoming balls as you can to get a higher score.
+A one-sentence summary of your game. Try to score as many goals as you can by shooting the puck into the other player's goal. First player to reach 13 wins!
 </li>
 
 <li><strong>Theme:</strong>
-State which of the Storymatic themes you used. The themes I used this week were fame and rotation. The balls rotate back around when they collide with the left boundary. The setting of this game is also in a gym where you are trying to get the highest score from a class full of people. They are throwing dogeballs at you, and your goal is to get the most "fame" or score.
+State which of the Storymatic themes you used. This game was prototyped off my analog assignment.
 </li>
 
 <li><strong>Mandated Variety:</strong>
-State which input, randomness, genre, and play style you used in this prototype. The input was keyboard, the randomness was deterministic, and the play style is competitor or performer.
+State which input, randomness, genre, and play style you used in this prototype. The input was keyboard and mouse, the randomness was deterministic, playstyle was competitor, and genre was racing.
 </li>
 
 <li><strong>Prototype Goal:</strong>
-What game mechanic is this prototype evaluating? This prototype is evaluating game physics and unit collision, along with keyboard input to move character around the map while trying to dodge incoming projectiles.
+What game mechanic is this prototype evaluating? This prototype is evaluating game physics and unit collision, along with keyboard input and mouse movement to move paddles to block pucks from entering the goal.
 </li>
 
 <li><strong>Player Experience Goals:</strong>
-What experience do you want players to have when playing your game? I want players to have an enjoying and competitive experience trying to get the highest score they can trying to avoid incoming balls.
+What experience do you want players to have when playing your game? I want players to have an enjoying and competitive experience trying to get the highest score they can by beating another player.
 </li>
 
 <li><strong>Gameplay:</strong>
 A paragraph describing the actions the player can perform, the system dynamics, and the core mechanic. Include a concise explanation of the prototype’s inputs and their expected effects (how to play). You can also describe game play that is not in the prototype. You may include mock-up images for parts of the game not in the prototype.
-The player can use the arrow keys to move the character around the screen. The main goal is to dodge as many incoming projectiles as you can. The score will keep going up every second you stay alive. This game is pure skill, and the player has everything in their control.
+Player 1 can control the bottom paddle using the mouse, and player 2 can control the top paddle using A to move left and D to move right. The goal is to get the ball into the other player's goal, which will give you a point. Whoever gets 13 points first wins!
 </li>
 
 <li><strong>Strategies:</strong>
-What player strategies do you expect will be effective at playing this game? A trick to get a better score is to click the down arrow key when mid-air to approach the ground faster. Additionally, you want to stay as far back as you can so you can analyze the orientation of balls coming at you.
+What player strategies do you expect will be effective at playing this game? The right and left hand sides of the paddle add a little spin to the puck, so it will make it harder to predict where the puck will go. You can use this to your advantage when strking the incoming puck.
 </li>
 
 <li><strong>Story/Setting/Premise:</strong>
 A paragraph about the world your game is set in and who the characters are. What makes the game world and its occupants unique and interesting? Do the tokens represent something? If the game has a backstory, mention it here. If the game is abstract, then say so.
 How will the dramatic tension interact with the gameplay tension?
 
-You are a student in a gym surrounded by your classmates. It is your turn now to dodge all the balls they throw at you. You want to get as high of a score as you can to flex on your class and impress a girl you like.
-
+You're playing airhockey against your friend to win a bet. Whoever scores 13 points first wins!
 <li><strong>Target Audience:</strong>
-A single sentence that describes the demographic you're trying to reach. Target audience is anyone who likes dodgeball or playing skill-based games.
+A single sentence that describes the demographic you're trying to reach. Target audience is anyone who likes arcade games or hockey.
 </li>
 
 <li><strong>Play Time:</strong>
-How long does your game take to play? Play time is entirely dependent on how good the user is. Usually the average is 20-30 seconds.
+How long does your game take to play? Play time is entirely dependent on how good the user is. Usually the average is 2-3 minutes
 </li>
 
 </ul>
