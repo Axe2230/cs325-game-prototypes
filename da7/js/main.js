@@ -31,8 +31,8 @@ var Breakout = new Phaser.Class({
     create: function ()
     {
         this.add.image(400, 300, 'bg');
-        info = this.add.text(10, 10, '', { font: '38px Courier', fill: '#00ff00' });
-        info2 = this.add.text(600, 550, '', { font: '38px Courier', fill: '#ff0000' });
+        info = this.add.text(10, 10, '', { font: '38px Courier', fill: '#008000' });
+        info2 = this.add.text(600, 550, '', { font: '38px Courier', fill: '#1E90FF' });
         //  Enable world bounds, but disable the floor
         this.physics.world.setBoundsCollision(true, true, true, false);
 
