@@ -30,17 +30,17 @@ class MyScene extends Phaser.Scene {
 
         this.cursors = this.input.keyboard.createCursorKeys();
 
-        this.agent = this.physics.add.image(400, 200, 'agent').setCollideWorldBounds(true).setScale(0.1).setDepth(1);
+        this.agent = this.physics.add.image(20, 570, 'agent').setCollideWorldBounds(true).setScale(0.1).setDepth(1);
 
         this.cameras.main.startFollow(this.agent, true, 0.3, 0.3);
         this.cameras.main.setZoom(3);
 
 
         var spy = this.physics.add.staticGroup();
-        var p1 = spy.create(200, 600, 'spy');
-        var p2 = spy.create(300, 700, 'spy');
-        var p3 = spy.create(400, 350, 'spy');
-        var p4 = spy.create(450, 200, 'spy');
+        var p1 = spy.create(200, 538, 'spy');
+        var p2 = spy.create(320, 528, 'spy');
+        var p3 = spy.create(490, 368, 'spy');
+        var p4 = spy.create(250, 280, 'spy');
         var p5 = spy.create(150, 400, 'spy');
         this.physics.add.collider(this.agent, spy, (agent, spy) => {
             spy.destroy();
