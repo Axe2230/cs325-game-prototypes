@@ -74,7 +74,7 @@ class MyScene extends Phaser.Scene {
         }
         const x = this.agent.x;
         const y = this.agent.y;
-        if(score == 4){
+        if(score >= 4){
           scoreText.x = x - 100;
           scoreText.y = y - 80;
           scoreText.setText('You defeated them all. You win!')
