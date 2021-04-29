@@ -40,7 +40,7 @@ class MyScene extends Phaser.Scene {
         this.agent = this.physics.add.image(20, 570, 'agent').setCollideWorldBounds(true).setScale(0.1).setDepth(1);
 
         this.cameras.main.startFollow(this.agent, true, 0.3, 0.3);
-        //this.cameras.main.setZoom(3);
+        this.cameras.main.setZoom(3);
 
         var platforms = this.physics.add.staticGroup();
         platforms.create(233, 310, 'wall');
