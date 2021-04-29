@@ -16,6 +16,7 @@ class MyScene extends Phaser.Scene {
         this.load.image('spy', 'assets/spy.png');
         this.load.audio('music', 'assets/music.mp3');
         this.load.image('trophy', 'assets/trophy.png')
+        this.load.image('wall', 'assets/wall.JPG')
     }
 
     create() {
@@ -36,6 +37,8 @@ class MyScene extends Phaser.Scene {
         this.cameras.main.startFollow(this.agent, true, 0.3, 0.3);
         this.cameras.main.setZoom(3);
 
+        var platforms = this.physics.add.staticGroup();
+        //platforms.create(500, 320, 'wall');
 
         var spy = this.physics.add.staticGroup();
         var p1 = spy.create(200, 538, 'spy');
